@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- 引入angular js 1的lib -->
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="js/todoController.js"></script>
+</head>
+<body ng-app="todomvc">
+	<!-- 輸入框 -->
+	<div>
+		<!--按enter就可以輸入 -->
+		<form ng-submit="addTodo()">
+			<input type="text" placeholder="請輸入待辦事項..." ng-model="newTodo" ng-disabled="saving">
+		</form>
+	</div>
+	<!-- 全選的checkbox -->
+	<div ng-show="todos.length">
+		<input type="checkbox" ng-model="allChecked" ng-click="markAll(allChecked)">
+	</div>
+	<!-- 列出輸入的資訊 -->
+	<div>
+		<!-- 每項資訊前面有checkbox -->
+		<div></div>
+	</div>
+	<!-- 每個列出的資訊都有刪除鈕 -->
+	<!-- 全部、未完成、已完成 以及刪除完成-->
+</body>
+</html>
